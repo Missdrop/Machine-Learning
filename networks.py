@@ -1,10 +1,10 @@
 import torch
 
 class Actor(torch.nn.Module):
-    def __init__(self, state_dim, hidden_dim):
+    def __init__(self, input_dim, hidden_dim):
         super().__init__()
         self.network = torch.nn.Sequential(
-            torch.nn.Linear(state_dim, hidden_dim),
+            torch.nn.Linear(input_dim, hidden_dim),
             torch.nn.ReLU(),
             torch.nn.Linear(hidden_dim, hidden_dim),
             torch.nn.ReLU(),
@@ -15,10 +15,10 @@ class Actor(torch.nn.Module):
         return self.network(state)
 
 class Cretic(torch.nn.Module):
-    def __init__(self, state_dim, hidden_dim):
+    def __init__(self, input_dim, hidden_dim):
         super().__init__()
         self.network = torch.nn.Sequential(
-            torch.nn.Linear(state_dim, hidden_dim),
+            torch.nn.Linear(input_dim, hidden_dim),
             torch.nn.ReLU(),
             torch.nn.Linear(hidden_dim, hidden_dim),
             torch.nn.ReLU(),
@@ -30,10 +30,10 @@ class Cretic(torch.nn.Module):
         return self.network(state)
 
 class SACActor(torch.nn.Module):
-    def __init__(self, state_dim, hidden_dim):
+    def __init__(self, input_dim, hidden_dim):
         super().__init__()
         self.s = torch.nn.Sequential(
-            torch.nn.Linear(state_dim, hidden_dim),
+            torch.nn.Linear(input_dim, hidden_dim),
             torch.nn.ReLU(),
             torch.nn.Linear(hidden_dim, hidden_dim),
             torch.nn.ReLU(),

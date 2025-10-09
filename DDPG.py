@@ -13,9 +13,12 @@ memory = MemoryReplay(20000)
 actor = Actor(3, 128)
 actor_target = Actor(3, 128)
 actor_target.load_state_dict(actor.state_dict())
+Tool.requires_grad(actor_target, False)
+
 cretic = Cretic(4, 128)
 cretic_target = Cretic(4, 128)
 cretic_target.load_state_dict(cretic.state_dict())
+Tool.requires_grad(cretic_target, False)
 
 actorLR = 5e-4
 creticLR = 5e-3
@@ -88,7 +91,7 @@ cretic.train()
 # train loop
 for epoch in range(200):
     old_len = len(memory)
-    while len(memory) - old_len < 200:
+    while len(memory) - old_len < 200 and len(memory) != 20000:
         memory.push(play()[0])
 
 

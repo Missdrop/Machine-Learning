@@ -9,6 +9,7 @@ class Actor(torch.nn.Module):
             torch.nn.Linear(hidden_dim, hidden_dim),
             torch.nn.ReLU(),
             torch.nn.Linear(hidden_dim, 1),
+            torch.nn.Tanh(),
         )
 
     def forward(self, state):
@@ -23,7 +24,7 @@ class Cretic(torch.nn.Module):
             torch.nn.Linear(hidden_dim, hidden_dim),
             torch.nn.ReLU(),
             torch.nn.Linear(hidden_dim, 1),
-            torch.nn.Tanh(),
+            
         )
 
     def forward(self, state):

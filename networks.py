@@ -1,5 +1,6 @@
 import torch
 
+
 class Actor(torch.nn.Module):
     def __init__(self, input_dim, hidden_dim):
         super().__init__()
@@ -15,6 +16,7 @@ class Actor(torch.nn.Module):
     def forward(self, state):
         return self.network(state)
 
+
 class Cretic(torch.nn.Module):
     def __init__(self, input_dim, hidden_dim):
         super().__init__()
@@ -24,11 +26,11 @@ class Cretic(torch.nn.Module):
             torch.nn.Linear(hidden_dim, hidden_dim),
             torch.nn.ReLU(),
             torch.nn.Linear(hidden_dim, 1),
-            
         )
 
     def forward(self, state):
         return self.network(state)
+
 
 class SACActor(torch.nn.Module):
     def __init__(self, input_dim, hidden_dim):

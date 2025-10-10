@@ -2,6 +2,7 @@ from collections import deque
 import random
 import torch
 
+
 class MemoryReplay(object):
 
     def __init__(self, capacity):
@@ -22,4 +23,3 @@ class MemoryReplay(object):
 
     def __len__(self):
         return len(self.pool)
-

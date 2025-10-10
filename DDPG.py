@@ -11,9 +11,9 @@ env = Wrapper()
 memory = MemoryReplay(20000)
 
 actor = Actor(3, 128)
-actor_target = Actor(3, 128)
-actor_target.load_state_dict(actor.state_dict())
-Tool.requires_grad(actor_target, False)
+actor_delay = Actor(3, 128)
+actor_delay.load_state_dict(actor.state_dict())
+Tool.requires_grad(actor_delay, False)
 
 cretic = Cretic(4, 128)
 cretic_target = Cretic(4, 128)
@@ -71,7 +71,7 @@ def train_cretic(state, action, reward, next_state, over):
     value = cretic(input)
 
     with torch.no_grad():
-        next_action = actor_target(next_state)
+        next_action = actor_delay(next_state)
         input = torch.cat([next_state, next_action], dim=1)
         target = cretic_target(input)
     target = target * 0.99 * (1 - over) + reward
@@ -102,7 +102,7 @@ for epoch in range(200):
         train_actor(state)
         _, value = train_cretic(state, action, reward, next_state, over)
 
-        Tool.soft_update(actor, actor_target)
+        Tool.soft_update(actor, actor_delay)
         Tool.soft_update(cretic, cretic_target)
 
     if epoch % 20 == 0:

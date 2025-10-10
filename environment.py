@@ -18,11 +18,8 @@ class Wrapper(gym.Wrapper):
         state, reward, terminated, truncated, info = self.env.step([action * 2])
         over = terminated or truncated
 
-        # normalize reward
-        reward = (reward + 8) / 8
-
         self.step_n += 1
-        if self.step_n >= 200:
+        if self.step_n >= 200 and self.render_mode is None:
             over = True
         return state, reward, over
 

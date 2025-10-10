@@ -84,16 +84,17 @@ def train_cretic(state, action, reward, next_state, over):
 
     return loss.item(), value.mean().item()
 
+
 # make model training mode
 actor.train()
 cretic.train()
+
 
 # train loop
 for epoch in range(200):
     old_len = len(memory)
     while len(memory) - old_len < 200 and len(memory) != 20000:
         memory.push(play()[0])
-
 
     for i in range(200):
         state, action, reward, next_state, over = memory.sample(128)
@@ -107,3 +108,15 @@ for epoch in range(200):
     if epoch % 20 == 0:
         test_result = sum([play()[1] for _ in range(20)]) / 20
         print(epoch, len(memory), value, test_result)
+
+env.close()
+
+# check the final model
+over = False
+env = Wrapper("human")
+state = env.reset()
+while not over:
+    action = actor(torch.FloatTensor(state).reshape(1, 3)).item()
+    state, _, over = env.step(action)
+
+env.close()

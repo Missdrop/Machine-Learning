@@ -1,9 +1,14 @@
-# DDPG on Pendulum-v1
+# Machine Learning
 
-An eazy realization of DDPG(TD3), runs on Pendulum-v1, for study use.
+This is a repository for me to imply interesting algorithms I found during my study.
+Includes **Traditional Machine Learning**, **Deep Learning** and **Reinforcement Learning**.
 
-# Installation
+## Requirement
+
+## Installation
 
 This repository provides a requirements.txt, can be easily installed by:
 
 ``pip install -r requirements.txt``
+
+> But I strongly recommend you to install a PyTorch version with **CUDA support**, which is available [**HERE**](https://pytorch.org/get-started/locally/).

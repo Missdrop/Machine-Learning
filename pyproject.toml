@@ -1,0 +1,20 @@
+[project]
+name = "machine-learning"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "gymnasium[all]",
+    "ipykernel>=7.3.0",
+    "torch",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu132", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+

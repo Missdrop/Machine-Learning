@@ -7,8 +7,13 @@ Includes **Traditional Machine Learning**, **Deep Learning** and **Reinforcement
 
 ## Installation
 
-This repository provides a requirements.txt, can be easily installed by:
+This repository use [**uv**](https://github.com/astral-sh/uv) to manage packages, the environment can be easily
+installed by:
 
-``pip install -r requirements.txt``
+```shell
+$ uv sync
+```
 
-> But I strongly recommend you to install a PyTorch version with **CUDA support**, which is available [**HERE**](https://pytorch.org/get-started/locally/).
+> This command will automatically install torch+cu132 (CUDA 13.2) for Windows and linux users.
+> If your GPU do not support CUDA 13.2, please edit `pyproject.toml` to
+> switch [torch version](https://pytorch.org/get-started/locally/).

@@ -1,10 +1,10 @@
 [project]
 name = "machine-learning"
 version = "0.1.0"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "gymnasium[all]",
-    "ipykernel>=7.3.0",
+    "ipykernel",
     "torch",
     "torchvision",
 ]
@@ -21,4 +21,3 @@ torch = [
 torchvision = [
     { index = "pytorch-cu132", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]
-

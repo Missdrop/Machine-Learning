@@ -3,8 +3,6 @@
 This is a repository for me to imply interesting algorithms I found during my study.
 Includes **Traditional Machine Learning**, **Deep Learning** and **Reinforcement Learning**.
 
-## Requirement
-
 ## Installation
 
 This repository use [**uv**](https://github.com/astral-sh/uv) to manage packages, the environment can be easily

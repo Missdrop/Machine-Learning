@@ -3,8 +3,12 @@ name = "machine-learning"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
+    "duckdb>=1.5.4",
     "gymnasium[all]",
     "ipykernel",
+    "livelossplot>=0.6.1",
+    "pandas>=3.0.3",
+    "tensorboard",
     "torch",
     "torchvision",
 ]

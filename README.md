@@ -12,8 +12,8 @@ installed by:
 $ uv sync
 ```
 
-> This command will automatically install torch+cu132 (CUDA 13.2) for Windows and linux users.
-> If your GPU do not support [CUDA](https://developer.nvidia.com/cuda/toolkit) 13.2, please edit `pyproject.toml` to
+> This command will automatically install torch+cu128 (CUDA 12.8) for Windows and linux users.
+> If your GPU do not support [CUDA](https://developer.nvidia.com/cuda/toolkit) 12.8, please edit `pyproject.toml` to
 > switch [torch version](https://pytorch.org/get-started/locally/).
 
 ## Run

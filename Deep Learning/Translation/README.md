@@ -2,6 +2,8 @@
 
 This implementation follows the original paper of Transformer, without using `torch.nn.Transformer`.
 
+A pre-trained model is available at github release.
+
 If you want to train the model by yourself, please tune the `batch_size` to fit your GPU memory,
 and `epochs` to control the training time.
 

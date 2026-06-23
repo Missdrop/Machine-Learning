@@ -17,7 +17,7 @@ class Actor(torch.nn.Module):
         return self.network(state)
 
 
-class Cretic(torch.nn.Module):
+class Critic(torch.nn.Module):
     def __init__(self, input_dim, hidden_dim):
         super().__init__()
         self.network = torch.nn.Sequential(

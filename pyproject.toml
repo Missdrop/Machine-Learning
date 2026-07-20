@@ -9,11 +9,13 @@ dependencies = [
     "ipywidgets",
     "kagglehub",
     "livelossplot",
+    "marimo",
     "matplotlib",
     "nltk",
     "numpy",
     "pandas",
     "pandas-stubs",
+    "ruff",
     "tensorboard",
     "torch",
     "torchvision",
@@ -31,3 +33,6 @@ torch = [
 torchvision = [
     { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]
+
+[tool.ruff.format]
+ignore-comments = true

@@ -6,9 +6,17 @@ Includes **Traditional Machine Learning**, **Deep Learning** and **Reinforcement
 ## Clone
 
 This git repository includes submodules, so please add a `--recurse-submodules` option on clone or pull commands.
+
 For example:
+
 ```shell
 $ git clone --recurse-submodules git@github.com:Missdrop/MADRL-on-UAV-based-MEC.git
+```
+
+Or use the command to sync submodules:
+
+```shell
+$ git submodule update --init --recursive
 ```
 
 ## Installation

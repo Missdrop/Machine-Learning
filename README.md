@@ -35,4 +35,4 @@ $ uv sync --all-packages
 
 ## Run
 
-This project widely uses Jupyter notebook, please make sure you have a Jupyter environment. (which is already installed if everything is OK)
+This project widely uses Jupyter notebook, please make sure you have a Jupyter environment.

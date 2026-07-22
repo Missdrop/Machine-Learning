@@ -1782,7 +1782,7 @@ requires-dist = [
     { name = "numpy" },
     { name = "pandas" },
     { name = "pandas-stubs" },
-    { name = "ruff", specifier = ">=0.15.22" },
+    { name = "ruff" },
     { name = "tensorboard" },
     { name = "torch", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
     { name = "torch", marker = "sys_platform == 'linux' or sys_platform == 'win32'", index = "https://download.pytorch.org/whl/cu128" },

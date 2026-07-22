@@ -10,7 +10,7 @@ This git repository includes submodules, so please add a `--recurse-submodules` 
 For example:
 
 ```shell
-$ git clone --recurse-submodules git@github.com:Missdrop/MADRL-on-UAV-based-MEC.git
+$ git clone --recurse-submodules git@github.com:Missdrop/Machine-Learning.git
 ```
 
 Or use the command to sync submodules:

@@ -9,7 +9,6 @@ dependencies = [
     "ipywidgets",
     "kagglehub",
     "livelossplot",
-    "marimo",
     "matplotlib",
     "nltk",
     "numpy",

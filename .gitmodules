@@ -1,3 +1,3 @@
-[submodule "Reinforcement Learning/Multi-Agent"]
-	path = Reinforcement Learning/Multi-Agent
-	url = https://github.com/Missdrop/MADRL-on-UAV-based-MEC.git
+[submodule "Reinforcement-Learning/Multi-Agent"]
+	path = Reinforcement-Learning/Multi-Agent
+	url = https://github.com/Missdrop/UAV-MEC-MADRL.git

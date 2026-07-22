@@ -28,7 +28,7 @@ torchvision = [
 
 [tool.uv.workspace]
 members = [
-    "Reinforcement-Learning/Multi-Agent",
+    "Reinforcement-Learning/UAV-MEC_Multi-Agent",
     "Reinforcement-Learning/Continuous-Control",
     "Deep-Learning/Translation",
     "Deep-Learning/Image-Classification",

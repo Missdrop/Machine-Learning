@@ -21,11 +21,12 @@ $ git submodule update --init --recursive
 
 ## Installation
 
-This project uses [**uv**](https://github.com/astral-sh/uv) to manage packages, the environment can be easily
+This project uses [**uv**](https://github.com/astral-sh/uv) to manage packages and projects, the environment can be
+easily
 installed by:
 
 ```shell
-$ uv sync
+$ uv sync --all-packages
 ```
 
 > This command will automatically install torch+cu128 (CUDA 12.8) for Windows and linux users.

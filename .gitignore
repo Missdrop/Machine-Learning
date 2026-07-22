@@ -16,5 +16,5 @@ wheels/
 # Datasets
 data
 
-# models
+# model checkpoints
 *.pth

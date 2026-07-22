@@ -13,8 +13,5 @@ wheels/
 # Virtual environments
 .venv
 
-# Datasets
-data
-
 # model checkpoints
 *.pth

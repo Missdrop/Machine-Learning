@@ -26,7 +26,7 @@ easily
 installed by:
 
 ```shell
-$ uv sync
+$ uv sync --all-packages
 ```
 
 > This command will automatically install torch+cu128 (CUDA 12.8) for Windows and linux users.
